@@ -7,16 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/main.js"></script>
 </head>
 
 <body>
-  <h1> Расчет индекса массы тела!!!</h1>
-  <h3>I = m / h²</h3>
-  <div><img src="./assets/img/Screenshot_4.png" alt=""></div>
-  <p>body mass index (BMI), ИМТ) — величина, позволяющая оценить степень соответствия массы человека и его роста и тем
-    самым косвенно судить о том, является ли масса недостаточной, нормальной или избыточной. Важен при определении
-    показаний для необходимости лечения.</p>
-  <script src="./assets/js/main.js"></script>
+  <div class="container">
+    <h1> Индекс массы тела</h1>
+    <div class='row row-cols-1 row-cols-lg-4 my-4'>
+      <div class="form-group">
+        <label for="sumH">Ваш рост (м) :</label>
+        <input oninput="calc()" type="number" class="form-control" id="sumH" value="1.78">
+      </div>
+      <div class="form-group">
+        <label for="sumM">Ваш вес (кг) :</label>
+        <input oninput="calc()" type="number" class="form-control" id="sumM" value="80">
+      </div>
+      <button class="btn btn-primary w-100" onclick="calc()">
+        Рассчитать
+      </button>
+      <h3 class='my-4'>Ваш Индекс : <output id="resultPlace">-</output> кг/м²</h3>
+      <h3 class='my-4'>Он означает : <output id="resultZ">-</output></h3>
+
+
+    </div>
 </body>
 
 </html>
